@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notaLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/particleImage"
+        android:id="@+id/lapizImage"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -15,7 +16,7 @@
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageView
-        android:id="@+id/particleImage2"
+        android:id="@+id/deleteButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="344dp"
@@ -31,7 +32,7 @@
         android:layout_marginStart="32dp"
         android:text="TextView"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/particleImage"
-        app:layout_constraintStart_toEndOf="@+id/particleImage"
-        app:layout_constraintTop_toTopOf="@+id/particleImage" />
+        app:layout_constraintBottom_toBottomOf="@+id/lapizImage"
+        app:layout_constraintStart_toEndOf="@+id/lapizImage"
+        app:layout_constraintTop_toTopOf="@+id/lapizImage" />
 </androidx.constraintlayout.widget.ConstraintLayout>

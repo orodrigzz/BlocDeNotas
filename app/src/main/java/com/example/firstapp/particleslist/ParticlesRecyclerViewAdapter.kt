@@ -2,6 +2,7 @@ package com.example.firstapp.particleslist
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.databinding.ItemParticleBinding
 
@@ -12,7 +13,9 @@ class ParticlesRecyclerViewAdapter(val particles: List<String>) :
         RecyclerView.ViewHolder(binding.root) {
 
         val name = binding.particleName
-        val image = binding.particleImage
+        val image = binding.lapizImage
+        val delete = binding.deleteButton
+        val layout = binding.notaLayout
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParticleVH {
@@ -29,4 +32,5 @@ class ParticlesRecyclerViewAdapter(val particles: List<String>) :
     override fun getItemCount(): Int {
         return particles.size
     }
+
 }
