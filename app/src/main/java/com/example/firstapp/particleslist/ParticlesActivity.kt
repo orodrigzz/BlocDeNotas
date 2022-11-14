@@ -19,7 +19,11 @@ class ParticlesActivity : AppCompatActivity() {
         "Nota9",
         "Nota10",
         "Nota11",
-        "Nota12")
+        "Nota12",
+        "Horario",
+        "Recompensas",
+        "Buses",
+        "Prácticas")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
