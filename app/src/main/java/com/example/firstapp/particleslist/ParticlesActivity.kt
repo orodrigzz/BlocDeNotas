@@ -32,6 +32,6 @@ class ParticlesActivity : AppCompatActivity() {
         binding = ActivityParticlesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.particlesRecyclerView.adapter = ParticlesRecyclerViewAdapter(particles)
+        binding.particlesRecyclerView.adapter = ParticlesRecyclerViewAdapter(particles,this)
     }
 }

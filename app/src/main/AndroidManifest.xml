@@ -14,10 +14,6 @@
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="29">
 
-        <uses-sdk android:minSdkVersion="25"
-            android:targetSdkVersion="29"
-            android:maxSdkVersion="28" />
-
         //PANTALLA PRINCIPAL
         <activity
             android:name=".particleslist.ParticlesActivity"
