@@ -3,17 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/notaLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    android:foregroundTint="#FFFFFF">
 
     <ImageView
-        android:id="@+id/lapizImage"
+        android:id="@+id/logoNota"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:background="#000000"
+        android:backgroundTint="@color/white"
+        android:foregroundTint="@color/white"
+        android:tint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        app:srcCompat="?attr/actionModePasteDrawable" />
 
     <ImageView
         android:id="@+id/deleteButton"
@@ -21,6 +28,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="344dp"
         android:layout_marginTop="16dp"
+        android:tint="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_delete" />
@@ -30,9 +38,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:background="@color/white"
+        android:drawableTint="#FFFFFF"
         android:text="TextView"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/lapizImage"
-        app:layout_constraintStart_toEndOf="@+id/lapizImage"
-        app:layout_constraintTop_toTopOf="@+id/lapizImage" />
+        app:layout_constraintBottom_toBottomOf="@+id/logoNota"
+        app:layout_constraintStart_toEndOf="@+id/logoNota"
+        app:layout_constraintTop_toTopOf="@+id/logoNota" />
 </androidx.constraintlayout.widget.ConstraintLayout>
