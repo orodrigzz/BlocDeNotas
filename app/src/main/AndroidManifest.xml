@@ -14,9 +14,8 @@
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="29">
 
-        //PANTALLAPRINCIPAL
         <activity
-            android:name=".particleslist.ParticlesActivity"
+            android:name=".ParticlesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,30 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        //CLASE
-        <activity
-            android:name=".BottomBarActivity"
-            android:exported="true" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
-        // HACKATON 21-11
-        <activity
-            android:name=".Hackaton0"
-            android:exported="true" />
         <activity
             android:name=".Hackaton3"
-            android:exported="false" />
-        <activity
-            android:name=".Hackaton2"
-            android:exported="false" />
-        <activity
-            android:name=".Hackaton1"
             android:exported="false" />
 
     </application>

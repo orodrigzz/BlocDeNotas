@@ -1,4 +1,4 @@
-package com.example.firstapp.particleslist
+package com.example.firstapp
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.firstapp.Hackaton3
 import com.example.firstapp.databinding.ItemParticleBinding
 
 class ParticlesRecyclerViewAdapter(val particles: List<String>, val context : Context) :
