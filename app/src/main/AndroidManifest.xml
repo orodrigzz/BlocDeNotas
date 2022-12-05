@@ -14,7 +14,7 @@
         android:theme="@style/Theme.FirstApp"
         tools:targetApi="29">
 
-        //PANTALLA PRINCIPAL
+        //PANTALLAPRINCIPAL
         <activity
             android:name=".particleslist.ParticlesActivity"
             android:exported="true">

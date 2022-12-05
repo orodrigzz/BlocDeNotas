@@ -5,9 +5,11 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.Hackaton3
 import com.example.firstapp.databinding.ItemParticleBinding
+import retrofit2.http.DELETE
 
 class ParticlesRecyclerViewAdapter(val particles: List<String>, val context : Context) :
     RecyclerView.Adapter<ParticlesRecyclerViewAdapter.ParticleVH>() {
@@ -32,11 +34,12 @@ class ParticlesRecyclerViewAdapter(val particles: List<String>, val context : Co
 
         holder.deleteBtn.setOnClickListener {
             Toast.makeText(context, "Nota borrada correctamente", Toast.LENGTH_LONG).show()
+
         }
 
         holder.noteLayout.setOnClickListener {
             val intent = Intent(context, Hackaton3::class.java)
-            startActivity(intent)
+            //startActivity(intent)
         }
     }
 
