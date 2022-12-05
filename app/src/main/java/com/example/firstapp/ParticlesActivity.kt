@@ -2,13 +2,16 @@ package com.example.firstapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.firstapp.databinding.ActivityParticlesBinding
 
 class ParticlesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityParticlesBinding
 
-    private val particles = listOf("Nota1",
+    //val addBtton = binding.addButton
+
+    private var particles = listOf("Nota1",
         "Nota2",
         "Nota3",
         "Nota4",
@@ -18,8 +21,6 @@ class ParticlesActivity : AppCompatActivity() {
         "Nota8",
         "Nota9",
         "Nota10",
-        "Nota11",
-        "Nota12",
         "Horario",
         "Recompensas",
         "Buses",
@@ -33,5 +34,9 @@ class ParticlesActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.particlesRecyclerView.adapter = ParticlesRecyclerViewAdapter(particles,this)
+
+        //addBtton.setOnClickListener {
+        //    Toast.makeText(this, "AÑADIR NOTA", Toast.LENGTH_LONG).show()
+        //}
     }
 }

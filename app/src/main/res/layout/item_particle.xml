@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/notaLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -22,17 +23,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/actionModePasteDrawable" />
 
-    <ImageView
-        android:id="@+id/deleteButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="344dp"
-        android:layout_marginTop="16dp"
-        android:tint="#000000"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_delete" />
-
     <TextView
         android:id="@+id/particleName"
         android:layout_width="wrap_content"
@@ -45,4 +35,16 @@
         app:layout_constraintBottom_toBottomOf="@+id/logoNota"
         app:layout_constraintStart_toEndOf="@+id/logoNota"
         app:layout_constraintTop_toTopOf="@+id/logoNota" />
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="344dp"
+        android:layout_marginTop="16dp"
+        android:tint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

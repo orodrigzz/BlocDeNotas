@@ -11,6 +11,8 @@ import com.example.firstapp.databinding.ItemParticleBinding
 class ParticlesRecyclerViewAdapter(val particles: List<String>, val context : Context) :
     RecyclerView.Adapter<ParticlesRecyclerViewAdapter.ParticleVH>() {
 
+    private var lista = particles.toMutableList()
+
     inner class ParticleVH(binding: ItemParticleBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
@@ -30,17 +32,16 @@ class ParticlesRecyclerViewAdapter(val particles: List<String>, val context : Co
         holder.name.text = particle
 
         holder.deleteBtn.setOnClickListener {
-            Toast.makeText(context, "Nota borrada correctamente", Toast.LENGTH_LONG).show()
-
+            lista.removeAt(position)
+            notifyItemRemoved(position)
         }
 
         holder.name.setOnClickListener {
-            Toast.makeText(context, "Nombre editado correctamente", Toast.LENGTH_LONG).show()
-
+            Toast.makeText(context, "CAMBIAR NOMBRE", Toast.LENGTH_LONG).show()
         }
 
         holder.noteLayout.setOnClickListener {
-            Toast.makeText(context, "Accediendo a nota", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "ACCEDER NOTA", Toast.LENGTH_LONG).show()
             val intent = Intent(context, Hackaton3::class.java)
             //startActivity(intent)
         }
