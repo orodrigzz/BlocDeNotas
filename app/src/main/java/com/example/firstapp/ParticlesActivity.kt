@@ -9,7 +9,7 @@ class ParticlesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityParticlesBinding
 
-    //val addBtton = binding.addButton
+    val addBtton = binding.addButton
 
     private var particles = listOf("Nota1",
         "Nota2",
@@ -35,8 +35,8 @@ class ParticlesActivity : AppCompatActivity() {
 
         binding.particlesRecyclerView.adapter = ParticlesRecyclerViewAdapter(particles,this)
 
-        //addBtton.setOnClickListener {
-        //    Toast.makeText(this, "AÑADIR NOTA", Toast.LENGTH_LONG).show()
-        //}
+        addBtton.setOnClickListener {
+            Toast.makeText(this, "AÑADIR NOTA", Toast.LENGTH_LONG).show()
+        }
     }
 }
