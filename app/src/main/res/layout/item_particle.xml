@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/notaLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,13 +14,14 @@
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:background="#000000"
+        android:background="#FFFFFF"
         android:backgroundTint="@color/white"
-        android:foregroundTint="@color/white"
-        android:tint="#000000"
+        android:contentDescription="@string/nota"
+        android:foregroundTint="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="?attr/actionModePasteDrawable" />
+        app:srcCompat="?attr/actionModePasteDrawable"
+        app:tint="@color/black" />
 
     <TextView
         android:id="@+id/particleName"
@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:background="@color/white"
-        android:drawableTint="#FFFFFF"
-        android:text="TextView"
+        app:drawableTint="#FFFFFF"
+        android:text="@string/textview"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/logoNota"
         app:layout_constraintStart_toEndOf="@+id/logoNota"
@@ -42,9 +42,10 @@
         android:layout_height="50dp"
         android:layout_marginStart="344dp"
         android:layout_marginTop="16dp"
-        android:tint="#000000"
+        android:contentDescription="@string/papelera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_delete" />
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        app:tint="#000000" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

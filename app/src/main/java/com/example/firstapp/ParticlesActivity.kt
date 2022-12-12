@@ -2,29 +2,29 @@ package com.example.firstapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+//import android.widget.Toast
 import com.example.firstapp.databinding.ActivityParticlesBinding
 
 class ParticlesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityParticlesBinding
 
-    val addBtton = binding.addButton
+    //private val addBtton = binding.addButton
 
-    private var particles = listOf("Nota1",
-        "Nota2",
-        "Nota3",
-        "Nota4",
-        "Nota5",
-        "Nota6",
-        "Nota7",
-        "Nota8",
-        "Nota9",
-        "Nota10",
-        "Horario",
-        "Recompensas",
-        "Buses",
-        "Prácticas")
+    private var particles = listOf(
+        "NotaPredeterminada1",
+        "NotaPredeterminada2",
+        "NotaPredeterminada3",
+        "NotaPredeterminada4",
+        "NotaPredeterminada5",
+        "NotaPredeterminada6",
+        "NotaPredeterminada7",
+        "NotaPredeterminada8",
+        "NotaPredeterminada9",
+        "NotaPredeterminada10",
+        "NotaPredeterminada11",
+        "NotaPredeterminada12",
+        "NotaPredeterminada13")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,8 +35,8 @@ class ParticlesActivity : AppCompatActivity() {
 
         binding.particlesRecyclerView.adapter = ParticlesRecyclerViewAdapter(particles,this)
 
-        addBtton.setOnClickListener {
-            Toast.makeText(this, "AÑADIR NOTA", Toast.LENGTH_LONG).show()
-        }
+        //addBtton.setOnClickListener {
+        //    Toast.makeText(this, "AÑADIR NOTA", Toast.LENGTH_LONG).show()
+        //}
     }
 }

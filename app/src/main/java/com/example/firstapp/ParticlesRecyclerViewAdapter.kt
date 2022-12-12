@@ -1,14 +1,14 @@
 package com.example.firstapp
 
 import android.content.Context
-import android.content.Intent
+//import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.databinding.ItemParticleBinding
 
-class ParticlesRecyclerViewAdapter(val particles: List<String>, val context : Context) :
+class ParticlesRecyclerViewAdapter(private val particles: List<String>, private val context : Context) :
     RecyclerView.Adapter<ParticlesRecyclerViewAdapter.ParticleVH>() {
 
     private var lista = particles.toMutableList()
@@ -42,7 +42,7 @@ class ParticlesRecyclerViewAdapter(val particles: List<String>, val context : Co
 
         holder.noteLayout.setOnClickListener {
             Toast.makeText(context, "ACCEDER NOTA", Toast.LENGTH_LONG).show()
-            val intent = Intent(context, Hackaton3::class.java)
+            //val intent = Intent(this, MainActivity::class.java)
             //startActivity(intent)
         }
     }
