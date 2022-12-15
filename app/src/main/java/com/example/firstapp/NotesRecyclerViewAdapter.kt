@@ -6,29 +6,29 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.firstapp.databinding.ItemParticleBinding
+import com.example.firstapp.databinding.ItemNoteBinding
 
-class ParticlesRecyclerViewAdapter(private val particles: List<String>, private val context : Context) :
-    RecyclerView.Adapter<ParticlesRecyclerViewAdapter.ParticleVH>() {
+class NotesRecyclerViewAdapter(private val notes: List<String>, private val context : Context) :
+    RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteVH>() {
 
-    private var lista = particles.toMutableList()
+    private var lista = notes.toMutableList()
 
-    inner class ParticleVH(binding: ItemParticleBinding) :
+    inner class NoteVH(binding: ItemNoteBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        val name = binding.particleName
+        val name = binding.noteName
         val deleteBtn = binding.deleteButton
         val noteLayout = binding.notaLayout
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ParticleVH {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteVH {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = ItemParticleBinding.inflate(layoutInflater)
-        return ParticleVH(binding)
+        val binding = ItemNoteBinding.inflate(layoutInflater)
+        return NoteVH(binding)
     }
 
-    override fun onBindViewHolder(holder: ParticleVH, position: Int) {
-        val particle = particles[position]
+    override fun onBindViewHolder(holder: NoteVH, position: Int) {
+        val particle = notes[position]
         holder.name.text = particle
 
         holder.deleteBtn.setOnClickListener {
@@ -48,7 +48,7 @@ class ParticlesRecyclerViewAdapter(private val particles: List<String>, private 
     }
 
     override fun getItemCount(): Int {
-        return particles.size
+        return notes.size
     }
 
 }

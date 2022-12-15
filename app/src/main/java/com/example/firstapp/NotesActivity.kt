@@ -2,16 +2,16 @@ package com.example.firstapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.firstapp.databinding.ActivityNotesBinding
 //import android.widget.Toast
-import com.example.firstapp.databinding.ActivityParticlesBinding
 
-class ParticlesActivity : AppCompatActivity() {
+class NotesActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityParticlesBinding
+    private lateinit var binding: ActivityNotesBinding
 
     //private val addBtton = binding.addButton
 
-    private var particles = listOf(
+    private var notes = listOf(
         "NotaPredeterminada1",
         "NotaPredeterminada2",
         "NotaPredeterminada3",
@@ -30,10 +30,10 @@ class ParticlesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityParticlesBinding.inflate(layoutInflater)
+        binding = ActivityNotesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.particlesRecyclerView.adapter = ParticlesRecyclerViewAdapter(particles,this)
+        binding.particlesRecyclerView.adapter = NotesRecyclerViewAdapter(notes,this)
 
         //addBtton.setOnClickListener {
         //    Toast.makeText(this, "AÑADIR NOTA", Toast.LENGTH_LONG).show()
