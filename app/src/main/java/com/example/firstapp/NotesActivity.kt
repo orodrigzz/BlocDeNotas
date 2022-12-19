@@ -2,14 +2,13 @@ package com.example.firstapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.firstapp.databinding.ActivityNotesBinding
-//import android.widget.Toast
 
 class NotesActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNotesBinding
-
-    //private val addBtton = binding.addButton
+    private val llmanager = LinearLayoutManager(this)
 
     private var notes = listOf(
         "NotaPredeterminada1",
@@ -26,6 +25,7 @@ class NotesActivity : AppCompatActivity() {
         "NotaPredeterminada12",
         "NotaPredeterminada13")
 
+    private var lista = notes.toMutableList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,10 +33,21 @@ class NotesActivity : AppCompatActivity() {
         binding = ActivityNotesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.particlesRecyclerView.adapter = NotesRecyclerViewAdapter(notes,this)
+        binding.particlesRecyclerView.adapter = NotesRecyclerViewAdapter(lista,this)
 
-        //addBtton.setOnClickListener {
-        //    Toast.makeText(this, "AÑADIR NOTA", Toast.LENGTH_LONG).show()
-        //}
+        binding.addButton.setOnClickListener {
+            createNota()
+        }
+    }
+
+    private fun createNota(){
+        val nota = Nota(
+            "NotaCreada"
+        )
+
+        lista.add(index = 3, nota.toString())
+        binding.particlesRecyclerView.adapter?.notifyItemInserted(3)
+        llmanager.scrollToPositionWithOffset(3,10)
+
     }
 }

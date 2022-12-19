@@ -8,10 +8,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstapp.databinding.ItemNoteBinding
 
-class NotesRecyclerViewAdapter(private val notes: List<String>, private val context : Context) :
+class NotesRecyclerViewAdapter(private val lista: MutableList<String>, private val context : Context) :
     RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteVH>() {
-
-    private var lista = notes.toMutableList()
 
     inner class NoteVH(binding: ItemNoteBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -28,8 +26,8 @@ class NotesRecyclerViewAdapter(private val notes: List<String>, private val cont
     }
 
     override fun onBindViewHolder(holder: NoteVH, position: Int) {
-        val particle = notes[position]
-        holder.name.text = particle
+        val note = lista[position]
+        holder.name.text = note
 
         holder.deleteBtn.setOnClickListener {
             lista.removeAt(position)
@@ -48,7 +46,7 @@ class NotesRecyclerViewAdapter(private val notes: List<String>, private val cont
     }
 
     override fun getItemCount(): Int {
-        return notes.size
+        return lista.size
     }
 
 }
