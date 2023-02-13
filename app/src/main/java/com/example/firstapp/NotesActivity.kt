@@ -19,19 +19,7 @@ class NotesActivity : AppCompatActivity() {
     private var ad: InterstitialAd? = null
 
     private var notes = listOf(
-        "NotaPredeterminada1",
-        "NotaPredeterminada2",
-        "NotaPredeterminada3",
-        "NotaPredeterminada4",
-        "NotaPredeterminada5",
-        "NotaPredeterminada6",
-        "NotaPredeterminada7",
-        "NotaPredeterminada8",
-        "NotaPredeterminada9",
-        "NotaPredeterminada10",
-        "NotaPredeterminada11",
-        "NotaPredeterminada12",
-        "NotaPredeterminada13")
+        "Tutorial")
 
     private var lista = notes.toMutableList()
 
@@ -57,9 +45,9 @@ class NotesActivity : AppCompatActivity() {
             "NotaCreada"
         )
 
-        lista.add(index = 3, nota.toString())
-        binding.particlesRecyclerView.adapter?.notifyItemInserted(3)
-        llmanager.scrollToPositionWithOffset(3,10)
+        lista.add(1, nota.toString())
+        binding.particlesRecyclerView.adapter?.notifyItemInserted(1)
+        llmanager.scrollToPositionWithOffset(0,10)
 
     }
     override fun onResume() {
