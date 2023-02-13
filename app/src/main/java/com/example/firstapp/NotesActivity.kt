@@ -53,7 +53,7 @@ class NotesActivity : AppCompatActivity() {
     }
 
     private fun createNota(){
-        val nota = Nota(
+        val nota = (
             "NotaCreada"
         )
 
