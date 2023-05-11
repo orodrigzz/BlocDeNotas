@@ -1,10 +1,2 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        google()
-        mavenCentral()
-    }
-}
-
-rootProject.name = "FirstApp"
+rootProject.name = "Bloc de Notes"
 include ':app'

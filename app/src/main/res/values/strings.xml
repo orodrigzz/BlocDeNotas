@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">FirstApp</string>
-    <string name="example">Text canviat</string>
+    <string name="app_name">Bloc de notes</string>
+    <string name="ultima_actualitazci">Ultima actualització</string>
     <string name="nota">Nota</string>
-    <string name="textview">TextView</string>
-    <string name="papelera">Papelera</string>
-    <string name="todo">TODO</string>
-    <string name="titol">Bloc de Notes</string>
+    <string name="actualitzar_nota">Actualitzar nota</string>
+    <string name="actualitza">Actualitza</string>
+    <string name="actualitzar">Actualitzar</string>
+    <string name="nom">Nom…</string>
+    <string name="descripci">Descripció…</string>
+    <string name="guardar">Guardar</string>
 </resources>
